@@ -10,12 +10,12 @@
 
 class mod_sh:
 
-	def setup(self):
-		self.app = self.APP_SOCKET_PTY('bash', cwd='/')
-		self.app.set_parent(self)
+    def setup(self):
+        self.app = self.APP_SOCKET_PTY('bash', cwd='/')
+        self.app.set_parent(self)
 
-	def __call__(self, i):
-		self.app.push(i)
+    def __call__(self, i):
+        self.app.push(i)
 
 ##=============================================================================
 ## THE END

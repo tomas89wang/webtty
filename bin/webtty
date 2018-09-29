@@ -57,7 +57,7 @@ start()
         [ -d ${LOG_PATH} ] || mkdir -p ${LOG_PATH}
         [ -d ${PID_PATH} ] || mkdir -p ${PID_PATH}
         action "Start  ${NAME}... "
-        nohup python "${ROOT}/${PROG}" >>${LOG_FILE} 2>>${LOG_ERRF} &
+        nohup python2 "${ROOT}/${PROG}" >>${LOG_FILE} 2>>${LOG_ERRF} &
         echo "$!" >${PID_FILE}
         sleep 0.2
         state && ok || err

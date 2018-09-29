@@ -341,11 +341,11 @@ class app_socket(asyncore.dispatcher):
             self.ac_in_buffer.append(data)
             self.ac_in_buffer_length += len(data)
 
-	def handle_write(self):
-		self.initiate_send()
+    def handle_write(self):
+        self.initiate_send()
 
-	def handle_close(self):
-		self.close()
+    def handle_close(self):
+        self.close()
 
     def push(self, data):
         if self.spy:
